@@ -9,10 +9,10 @@ def valueChanged(key, value, isNew):
 
 
 NetworkTables.addEntryListener(valueChanged)
+sd.putNumber("TestNumber", 1)
 
 while True:
     time.sleep(1)
-    sd.putNumber("TestNumber", 1)
 
 
 

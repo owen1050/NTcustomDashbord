@@ -4,15 +4,9 @@ import time
 NetworkTables.initialize(server="localhost")
 sd = NetworkTables.getTable("SmartDashboard")
 
-def valueChanged(key, value, isNew):
-    print("valueChanged: key: '%s'; value: %s; isNew: %s" % (key, value, isNew))
+sd.putNumber("TestNumber", -1)
+time.sleep(1)
 
-
-NetworkTables.addEntryListener(valueChanged)
-
-while True:
-    time.sleep(1)
-    sd.putNumber("TestNumber", 1)
 
 
 
